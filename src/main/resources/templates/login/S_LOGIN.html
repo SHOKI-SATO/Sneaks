@@ -57,18 +57,22 @@
     <p>メールアドレスとパスワードを入力してログインして下さい</p>
 
 	<form class="form-signin" role="form" id="login" th:action="@{/login}" method="post">
+	    <p class="text-danger" th:if="${session['SPRING_SECURITY_LAST_EXCEPTION']}!= null"
+	    th:text="${session['SPRING_SECURITY_LAST_EXCEPTION'].message}">
+	    ログインエラーメッセージ
+	    </p>
 	    <table class="id">
 	        <tr>
-	            <th><label for="email" class="id">E-MAIL:</label></th>
-	            <td><input type="text" name="email" id="email"></td>
+	            <th><label for="userId" class="id">E-MAIL:</label></th>
+	            <td><input type="text" name="userId" placeholder="ユーザーID"></td>
 	        </tr>
 	    </table>
 	
 	
 	    <table class="pass">
 	        <tr>
-	            <th><label>Password:</label></th>
-	            <td><input type="password"></td>
+	            <th><label for="password">Password:</label></th>
+	            <td><input type="password" name="password" placeholder="パスワード"></td>
 	        </tr>
 	    </table>
 	

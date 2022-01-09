@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS m_user (
-	id VARCHAR(50) PRIMARY KEY
+	user_id VARCHAR(50) PRIMARY KEY
 	, name VARCHAR(50)
 	, password VARCHAR(100)
 	, birthday DATE
@@ -7,17 +7,19 @@ CREATE TABLE IF NOT EXISTS m_user (
 	, phone_number CHAR(11)
 	, post_code CHAR(7)
 	, address VARCHAR(100)
+	, role CHAR(4)
 );
 
 INSERT INTO m_user (
-	id,
+	user_id,
 	name,
 	password,
 	birthday,
 	sex,
 	phone_number,
 	post_code,
-	address
+	address,
+	role
 )
 values(
 	'test@email.com',
@@ -27,5 +29,6 @@ values(
 	1,
 	'09012345678',
 	1048404,
-	'東京都中央区築地一丁目1番1号'
+	'東京都中央区築地一丁目1番1号',
+	'user'
 );

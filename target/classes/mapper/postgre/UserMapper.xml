@@ -5,6 +5,19 @@
 <!-- Mapperとxmlのマッピング -->
 <mapper namespace="com.example.repository.UserMapper">
 	
+	<!-- マッピング定義(ユーザー) -->
+	<resultMap type="com.example.domain.user.model.MUser" id="user">
+		<id column="user_id" property="userId"/>
+		<result column="password" property="password"/>
+		<result column="user_name" property="userName"/>
+		<result column="birthday" property="birthday"/>
+		<result column="sex" property="sex"/>
+		<result column="phone_number" property="phoneNumber"/>
+		<result column="post_code" property="postCode"/>
+		<result column="address" property="address"/>
+	</resultMap>
+	
+	
 	<!-- ユーザー一件登録 -->
 	<insert id="insertOne">
 		insert into m_user(
@@ -15,7 +28,8 @@
 			sex,
 			phone_number,
 			post_code,
-			address
+			address,
+			role
 		)
 		values(
 			#{id},
@@ -25,7 +39,28 @@
 			#{sex},
 			#{phoneNumber},
 			#{postCode},
-			#{address}
+			#{address},
+			#{role}
 		)
 	</insert>
+	
+	<!-- ユーザー一件 -->
+	<select id="findOne" resultMap="user">
+		select
+			*
+		from
+			m_user
+		where
+			user_id = #{userId}
+	</select>
+	
+	<!-- ログインユーザー情報取得 -->
+	<select id="findLoginUser" resultType="MUser">
+		select
+			*
+		from
+			m_user
+		where
+			user_id = #{userId}
+	</select>
 </mapper>
