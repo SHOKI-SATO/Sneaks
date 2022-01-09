@@ -1,11 +1,14 @@
 package com.example.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -14,17 +17,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	
+	@Autowired
+	private UserDetailsService userDetailsService; 
+	
 	@Bean
     public PasswordEncoder passwordEncoder() {
-
-    	BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
-
-	//これはハッシュ化済みの値をDBに登録する確認用に出力させるコード//
-	    String password = "1234";
-        String digest = bCryptPasswordEncoder.encode(password);
-        System.out.println("ハッシュ値 = " + digest);
-	///////////////////////////////////////////////////////////////
-
         return new BCryptPasswordEncoder();
     }
 
@@ -44,34 +41,47 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	/** セキュリティの各種設定 */
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		
+
 		//ログイン不要ページの設定
-	/**http
-			.authorizeRequests()
-				.antMatchers("/login").permitAll() //直リンクOK
-				.antMatchers("/user/signup").permitAll() //直リンクOK
-				.anyRequest().authenticated(); //それ以外は直リンクNG
-			*/
+	http
+		.authorizeRequests()
+			.antMatchers("/login").permitAll() //ログイン画面は常に直リンクOK
+			.antMatchers("/user/signup").permitAll() //新規登録画面は常に直リンクOK
+			.anyRequest().authenticated(); //それ以外は直リンクNG
+
 		
-		http.formLogin()
-        //ログイン画面は常にアクセス可能とする
-        .loginPage("/login").permitAll()
-        //ログインに成功したら検索画面に遷移する
-        .defaultSuccessUrl("/user/signup", true)
-        .and()
-        .authorizeRequests().antMatchers("/user/signup").permitAll()
-        //ログイン画面のcssファイルとしても共通のdemo.cssを利用するため、
-        //src/main/resources/static/cssフォルダ下は常にアクセス可能とする
-        .and()
-        .authorizeRequests().antMatchers("/css/**").permitAll()
-        .and()    //かつ
-        //それ以外の画面は全て認証を有効にする
-        .authorizeRequests().anyRequest().authenticated()
-        .and()    //かつ
-        //ログアウト時はログイン画面に遷移する
-        .logout().logoutSuccessUrl("/login").permitAll();
+	http
+		.formLogin()
+			.loginProcessingUrl("/login")//ログイン処理のパス
+			.loginPage("/login")//ログインページの指定
+			.failureUrl("/login?error")//ログイン失敗時の遷移先
+			.usernameParameter("userId")//ログインページのユーザーID
+			.passwordParameter("password")//ログインページのパスワード
+	        .defaultSuccessUrl("/products/top", true)//成功後の遷移先
+	        .and()
+	        //ログアウト時はログイン画面に遷移する
+	        .logout().logoutSuccessUrl("/login").permitAll();
 	
 		
 	}
 
+	/** 認証の設定 */
+	@Override
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+		
+		PasswordEncoder encoder = passwordEncoder();
+		//インメモリ認証
+		/** auth
+			.inMemoryAuthentication()
+				.withUser("user")//userを追加
+					.password(encoder.encode("user"));*/
+		
+		/** ユーザーデータで認証 */
+		auth
+			.userDetailsService(userDetailsService)
+			.passwordEncoder(encoder);
+	}
+	
+	
+	
 }
