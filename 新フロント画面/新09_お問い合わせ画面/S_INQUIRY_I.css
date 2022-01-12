@@ -1,0 +1,57 @@
+.main {
+    height: 800px;
+    font-size: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+form {
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.name {
+    margin-top: 10px;
+}
+
+.name-text {
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+}
+
+.mail {
+    margin-top: 20px;
+}
+
+.mail-text {
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+}
+
+.inquiry {
+    margin-top: 20px;
+}
+
+.inquiry-text {
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+}
+
+.inquiry-content {
+    margin-top: 20px;
+}
+
+.inquiry-content-text {
+    margin-top: 10px;
+    width: 100%;
+    height: 160px;
+}
+
+.btn-center {
+    text-align: center;
+}

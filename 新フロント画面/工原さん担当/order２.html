@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- bootstrap読込 -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+     <title>order完了</title>
+ </head>
+
+ <body>
+     <!-- ここからヘッダー -->
+     <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container col-10 mr-auto">
+                <!-- TOPページのリンクを貼る -->
+                <a class="navbar-brand ml-auto" href="#">Sneaks</a>
+            </div>
+            <div class="col-auto">
+                <ul class="navbar-nav">
+                    <li>
+                        <!-- ログイン画面のリンクを貼る -->
+                        <a class="nav-item text-white" href="#">新規登録/ログイン</a>
+                    </li>
+                    <li>
+                        <div class="bd-highlight mx-5">
+                            <!-- カート一覧のリンクを貼る -->
+                            <a class="fas fa-shopping-cart text-white" href="#"></a>
+                        </div>
+                    </li>
+                </ul>
+                <ul></ul>
+                <ul class="navbar-nav">
+                    <li>
+                        <input type="text" class="p-0.5 bd-highlight input-medium search-quer" placeholder="Search"
+                            value="">
+                        <!-- 検索ロジック追加 -->
+                        <button type="button" class="btn-light btn-outline-secondary btn-sm ">
+                            <i class="fas fa-search"></i></button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- ここまでヘッダー -->
+
+    
+    <!-- ここからメインコンテンツブロック -->
+    <!-- ここから注文者・商品情報ブロック -->
+    <div class="container-fluid">
+    <div class="row">
+
+<!-- ここからlightコンテンツブロック -->
+
+        <!-- ここから注文者情報の表示 -->
+
+        <div class="col-6 mt-5"  style="height:230px;">
+            <p><h3>ご注文者の確認</h3></p>
+            <p><h6>ご注文者</h6></p>
+            <div class="col-12 d-flex align-items-center justify-content-left" style="height:50px;">
+                <p><h12>氏名:</h12> texttexttext</p>
+                </div>
+            <div class="col-12 d-flex align-items-center justify-content-left" style="height:50px;">
+                <p><h12>住所:</h12> texttexttexttexttexttexttexttexttext</p>
+                </div>
+
+                <p><h6>お届け先</h6></p>
+                <div class="col-12 d-flex align-items-center justify-content-left" style="height:50px;">
+                    <p><h12>住所:</h12> texttexttexttexttexttexttexttexttext</p>
+                    </div>
+        </div>
+
+         <!-- ここまで注文者情報の表示 -->
+
+        <div class="col-6 mt-5"  style="height:230px;">
+            <!-- 商品画像 -->
+            <div class= "col-12 m-10  container  container  d-flex " style="height:160px;">
+                <div class="col-3  bg-secondary">
+                    <img src="..." class="img-fluid" alt="商品写真">
+                </div>
+
+
+<!-- ここからleftコンテンツブロック -->
+
+                <div class="col-12 m-2">
+                    <div class="col-12 mt-2 d-flex align-items-center justify-content-left" style="height:30px;">
+                        <p><h12>商品名:</h12><a href="   ">samplesamplesamplesample<br>samplesamplesamplesample</a></p>
+                        </div>
+
+                    <div class="col-12 mt-2 d-flex align-items-center justify-content-left" style="height:30px;">
+                        <br><h12>価格:</h12>XXXXX
+                    </div>
+
+                    <div class="col-12 mt-2 d-flex align-items-center justify-content-left" style="height:30px;">
+                        <br><h12>合計点数:</h12>XXXXX
+                    </div>
+
+                    <div class="col-12 mt-2 d-flex align-items-center justify-content-left" style="height:30px;">
+                        <br><h12>合計価格:</h12>XXXXX
+                    </div>
+                </div>
+            
+        </div>
+
+    </div>
+    </div>
+    </div>
+<!-- ここまで注文者・商品情報ブロック -->
+
+<!-- ここから支払い方法選択 -->
+    <div class="container-fluid">
+        <div class="row" style="height:50px;">
+
+    <div class="col-12 m-5"  style="height:50px;">
+        <div class="col-12 d-flex align-items-center justify-content-evenly" style="height:80px;">
+
+            <div class="支払い方法">
+                <p><h6>支払い方法</h6></p>
+                <div class="col-12 d-flex align-items-center justify-content-left" style="height:50px;">
+                    <p><h12>支払い方法</h12> クレジットカード</p>
+                    </div>
+              </div>
+        </div>
+    </div>
+
+<!-- ここまで支払い方法選択 -->
+
+
+
+
+
+<!-- ここからカート・次へ -->
+
+<div class="container-fluid">
+    <div class="row" style="height:50px;">
+
+<div class="col-12 m-5"  style="height:50px;">
+    <div class="col-12 d-flex align-items-center justify-content-evenly" style="height:80px;">
+
+        <div class="container container d-flex align-items-center justify-content-center" style="height:100px;">
+            <button type="button" class="btn btn-outline-primary btn-lg">  修正する <br>syuuseisuru</button>
+        </div>
+
+        <div class="container container d-flex align-items-center justify-content-center" style="height:100px;">
+            <button type="button" class="btn btn-outline-primary btn-lg">  注文確定  <br>cyuumonnkakutei</button>
+        </div>
+
+    </div>
+</div>
+        
+
+
+
+    <!-- ここまでメインコンテンツブロック -->
+
+
+    <!-- ここからフッター -->
+    <footer class="fixed-bottom">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="col-10">
+            </div>
+            <div class="container col-2">
+                <!-- お問い合わせページのリンクを貼る -->
+                <a class="text-white " href="#">お問い合わせ</a>
+            </div>
+        </nav>
+    </footer>
+    <!-- ここまでフッダー -->
+</body>
+
+</html> 
+ </body>
+
+ </html> 
