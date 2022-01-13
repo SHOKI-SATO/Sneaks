@@ -1,0 +1,89 @@
+.cf:before, .cf:after {
+    content:"";
+    display:table;
+}
+.cf:after {
+    clear: both;
+}
+
+.main {
+    padding-top: 89px;
+    height: 821px;
+}
+
+.left {
+    float: left;
+    margin-top: 50px;
+    margin-left: 80px;
+}
+
+.right {
+    float: right;
+    border: 1px solid;
+    margin-top: 50px;
+    margin-right: 80px;
+    padding: 10px;
+}
+
+.img-content {
+    float: left;
+}
+
+.img {
+    height: 200px;
+    width: 300px;
+}
+
+.right-content {
+    float: left;
+}
+
+.order-information h6 {
+    margin-bottom: 0;
+}
+
+ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.payment {
+    margin-top: 100px;
+}
+
+
+
+.payment-content {
+    padding-left: 0;
+    width: 940px;
+	margin: auto;
+	overflow: hidden;
+}
+
+.payment-content li {
+    float: left;
+    padding: 0 100px 0 100px;
+}
+
+
+
+/* フッター */
+.navbar-hooter {
+    background-color: #0d6efd;
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.container-footer {
+    margin: 0 auto;
+    width: 85%;
+    height: 40px;
+}
+
+.text-white-footer {
+    color: white;
+    float: right;
+    line-height: 40px;
+}

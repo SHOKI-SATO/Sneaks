@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="S_INQUIRY_I.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="text-center">
+            <h4>お問い合わせ</h4>
+        </div>
+
+        <form>
+            <div class="name">
+                <label>氏名</label>
+                <div class="text-box">
+                    <input type="text" class="name-text" name="name" required/>
+                </div>
+            </div>
+
+            <div class="mail">
+                <label>メールアドレス</label>
+                <div class="text-box">
+                    <input type="e-mail" class="mail-text" name="e-mail" placeholder="info@example.com" required />
+                </div>
+            </div>
+
+            <div class="inquiry">
+                <label>お問い合わせ分類</label>
+                <div class="text-box">
+                    <input type="text" class="inquiry-text" name="example" list="data1">
+                    <datalist id="data1">
+                        <!-- 必要なら選択肢修正 -->
+                        <option value="商品に関すること"></option>
+                        <option value="会員登録について"></option>
+                        <option value="発送について"></option>
+                        <option value="退会について"></option>
+                        <option value="その他"></option>
+                    </datalist>
+                </div>
+            </div>
+
+            <div class="inquiry-content">
+                <label>お問い合わせ内容</label>
+                <div class="text-area">
+                    <textarea name="inquiry" placeholder="お問い合わせ内容を入力してください" class="inquiry-content-text"></textarea>
+                </div>
+            </div>
+
+            <div class="btn-center">
+                ボタン押下時、お問い合わせ（完了）画面へ遷移（入力内容の処理は一旦おいとく）
+                <button type="submit" class="btn">送信</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

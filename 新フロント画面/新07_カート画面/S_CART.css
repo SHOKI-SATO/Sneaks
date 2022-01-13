@@ -1,0 +1,104 @@
+body {
+    position: relative;
+    min-height: 100vh;
+}
+
+.cf:before, .cf:after {
+    content:"";
+    display:table
+}
+
+.cf:after { 
+    clear:both 
+}
+
+.main {
+    padding-top: 89px;
+    height: max-content;
+}
+
+.cart {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.cart h1 {
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.left {
+    float: left;
+    width: 800px;
+    border: 1px solid;
+    border-color: #0dcaf0;
+    margin-left: 90px;
+}
+
+.picture {
+    float: left;
+}
+
+.photo {
+    width: 250px;
+    height: 200px;
+}
+
+.link {
+    float: left;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+.subtotal {
+    float: right;
+    height: 140px;
+    margin-top: 30px;
+    margin-right: 50px;
+    text-align: center;
+    justify-content: center;
+}
+
+.money {
+    margin: 20px 0 20px 0;
+}
+
+.right {
+    float: right;
+    width: 250px;
+    height: 310px;
+    border: 1px solid;
+    border-color: #0dcaf0;
+    margin-right: 90px;
+    text-align: center;
+}
+
+.align-items-center {
+    height: 50px;
+    margin-top: 40px;
+}
+
+.btn-sm {
+    height: 50px;
+}
+
+/* フッター */
+.navbar-hooter {
+    background-color: #0d6efd;
+    height: 40px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+.container-footer {
+    margin: 0 auto;
+    width: 85%;
+    height: 40px;
+}
+
+.text-white-footer {
+    color: white;
+    float: right;
+    line-height: 40px;
+}

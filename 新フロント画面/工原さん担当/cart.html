@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap読込 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>カート</title>
+</head>
+
+<body>
+    <!-- ここからヘッダー -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container col-10 mr-auto">
+                <!-- TOPページのリンクを貼る -->
+                <a class="navbar-brand ml-auto" href="#">Sneaks</a>
+            </div>
+            <div class="col-auto">
+                <ul class="navbar-nav">
+                    <li>
+                        <!-- ログイン画面のリンクを貼る -->
+                        <a class="nav-item text-white" href="#">新規登録/ログイン</a>
+                    </li>
+                    <li>
+                        <div class="bd-highlight mx-5">
+                            <!-- カート一覧のリンクを貼る -->
+                            <a class="fas fa-shopping-cart text-white" href="#"></a>
+                        </div>
+                    </li>
+                </ul>
+                <ul></ul>
+                <ul class="navbar-nav">
+                    <li>
+                        <input type="text" class="p-0.5 bd-highlight input-medium search-quer" placeholder="Search"
+                            value="">
+                        <!-- 検索ロジック追加 -->
+                        <button type="button" class="btn-light btn-outline-secondary btn-sm ">
+                            <i class="fas fa-search"></i></button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- ここまでヘッダー -->
+
+
+<!-- SHOPPING CART -->
+    <div class="container1 container d-flex align-items-center justify-content-center" style="height:200px;">
+        <p><h1>SHOPPING CART</h1></p>
+
+    </div>
+
+
+    <!-- ここからメインコンテンツブロック -->
+    <div class="container-fluid">
+    <div class="row">
+
+        <!-- ここからleftコンテンツブロック -->
+          <div class="col-8 m-3 border border-info "  style="height:200px;">
+
+        <!-- 商品写真リンク -->
+            <div class= "m-3 container  container  d-flex " style="height:160px;">
+                <div class="col-3  bg-secondary">
+                    <img src="..." class="img-fluid" alt="商品写真">
+                </div>
+            
+
+            <!-- 商品詳細 -->
+                <div class="col-5 m-2">
+                    
+
+                    <div class="col-12 d-flex align-items-center justify-content-left" style="height:50px;">
+                        <p><h12>商品名:</h12><a href="商品ページへ飛ぶ">samplesamplesamplesample<br>samplesamplesamplesample</a></p>
+                        </div>
+
+                    <div class="col-12 d-flex align-items-center justify-content-left" style="height:50px;">
+                        <br><h12>カラー:</h12><a href="カラー選択へ飛ぶ">red</a>
+                    </div>
+
+                    <div class="col-12 d-flex align-items-center justify-content-left" style="height:50px;">
+                        <br><h12>サイズ:</h12><a href="サイズ選択へ飛ぶ">28cm</a>
+                    </div>
+                </div>
+            
+                
+            <!-- 値段・個数・カウンター -->
+                <div class="col-4">
+                    <div class="col-12 d-flex align-items-center justify-content-left" style="height:50px;">
+                        <label for="number-of-unit" id="label-number-of-unit"></label>  
+                         <button type="button" aria-label="減らす" aria-describedby="label-number-of-unit">-</button>
+                         <input type="number" id="number-of-unit" name="unit" value="1" min="0" max="10">
+                         <button type="button" aria-label="増やす" aria-describedby="label-number-of-unit">+</button>
+                         <div class="visually-hidden" role="status" aria-live="polite">{input 要素内の値がここに代入される。}</div>
+                    </div>
+
+                     <!-- ここまで値段・個数・カウンター -->
+
+                      <!-- ここから商品金額表示 -->
+                    <div class="col-12 d-flex align-items-center justify-content-left" style="height:50px;">  <p>￥商品小計金額</p> </div>
+
+                     <!-- ここまで商品金額表示 -->
+
+                      <!-- ここから削除ボタン -->
+
+                    <div class="col-12 d-flex align-items-center justify-content-left" style="height:50px;"> 
+                        <button type="button" class="btn btn-outline-primary btn-sm"> 削除 <br>DERETE</button>
+                    </div>
+
+                         <!-- ここまで削除ボタン -->
+                </div>
+                </div>    
+          </div>
+        <!-- ここまでleftコンテンツブロック -->
+
+        <div class="col"></div>
+
+        <!-- ここから！rightコンテンツブロック -->
+         <div class="col-lg-3 m-3 border border-info">
+
+            <!-- 商品合計と金額の表示 --> 
+            <div class="container container d-flex align-items-center justify-content-center" style="height:100px;">
+                 <button type="button" class="btn btn-outline-primary btn-sm">商品合計(X)点<br>￥合計金額円</button>
+            </div>
+
+
+
+             <!-- 「レジへ進む」        購入画面へと移行 --> 
+             <div class="container container d-flex align-items-center justify-content-center" style="height:100px;">
+                 <button type="button" class="btn btn-outline-primary btn-sm">レジへ進む<br>PROCEED TO CHECKOUT</button>
+             </div>
+
+            <!-- 「ショッピングを続ける」     ホーム画面へと移行 --> 
+            <div class="container container d-flex align-items-center justify-content-center" style="height:100px;">
+                <button type="button" class="btn btn-outline-primary btn-sm">  ショッピングを続ける  <br>　CONTINUE SHOPPING　</button>
+            </div>
+         </div>
+        <!-- ここまで！rightコンテンツブロック -->
+    </div>
+       
+    </div>
+    <!-- ここまでメインコンテンツブロック -->
+
+
+    <!-- ここからフッター -->
+    <footer class="fixed-bottom">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="col-10">
+            </div>
+            <div class="container col-2">
+                <!-- お問い合わせページのリンクを貼る -->
+                <a class="text-white " href="#">お問い合わせ</a>
+            </div>
+        </nav>
+    </footer>
+    <!-- ここまでフッダー -->
+</body>
+
+</html> 
+ </body>
+
+ </html> 
