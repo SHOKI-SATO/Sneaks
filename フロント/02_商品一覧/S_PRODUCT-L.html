@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="S_PRODUCT-L.css">
+<title>商品一覧</title>
+<!-- bootstrap読込 -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+	crossorigin="anonymous">
+<!-- fontawesome読込 -->
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
+	integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+	crossorigin="anonymous">
+</head>
+
+<body>
+	<!-- ここからヘッダー -->
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+			<div class="container col-10 mr-auto">
+				<!-- TOPページのリンクを貼る -->
+				<a class="navbar-brand ml-auto" href="#">Sneaks</a>
+			</div>
+			<div class="col-auto">
+				<ul class="navbar-nav">
+					<li>
+						<!-- ログイン画面のリンクを貼る --> <a class="nav-item text-white" href="#">新規登録/ログイン</a>
+					</li>
+					<li>
+						<div class="bd-highlight mx-5">
+							<!-- カート一覧のリンクを貼る -->
+							<a class="fas fa-shopping-cart text-white" href="#"></a>
+						</div>
+					</li>
+				</ul>
+				<ul></ul>
+				<ul class="navbar-nav">
+					<li><input type="text"
+						class="p-0.5 bd-highlight input-medium search-quer"
+						placeholder="Search" value=""> <!-- 検索ロジック追加 -->
+						<button type="button"
+							class="btn-light btn-outline-secondary btn-sm ">
+							<i class="fas fa-search"></i>
+						</button></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<!-- ここまでヘッダー -->
+
+	<div class="top">
+		<!-- 商品数を表示 -->
+		<h1>全○○件</h1>
+		<select name="brand_name">
+			<!-- 絞り込み結果を表示 -->
+			<option hidden>絞り込み</option>
+			<option value="adidas">adidas</option>
+			<option value="vans">vans</option>
+			<option value="converse">converse</option>
+			<option value="nike">nike</option>
+		</select>
+	</div>
+	<div class="main">
+		<div class="first">
+			<div class="one">
+				<!-- 画像仮なのでDBから取り出す、画像・商品名・価格押下時に洗濯した商品の商品詳細に遷移 -->
+				<a href="###"><img class="aaa" src="vans_authentic_black.jpg"
+					title="###"></a><br> <a href="###">vans_authentic_black<br>¥10000
+				</a>
+				<p></p>
+			</div>
+			<div class="two">
+				<!-- 画像仮なのでDBから取り出す、画像・商品名・価格押下時に洗濯した商品の商品詳細に遷移 -->
+				<a href="###"><img class="aaa" src="vans_authentic_black.jpg"
+					title="###"></a><br> <a href="###">vans_authentic_black<br>¥10000
+				</a>
+				<p></p>
+			</div>
+			<div class="three">
+				<!-- 画像仮なのでDBから取り出す、画像・商品名・価格押下時に洗濯した商品の商品詳細に遷移 -->
+				<a href="###"><img class="aaa" src="vans_authentic_black.jpg"
+					title="###"></a><br> <a href="###">vans_authentic_black<br>¥10000
+				</a>
+				<p></p>
+			</div>
+		</div>
+		<div class="second">
+			<div class="four">
+				<!-- 画像仮なのでDBから取り出す、画像・商品名・価格押下時に洗濯した商品の商品詳細に遷移 -->
+				<a href="###"><img class="aaa" src="vans_authentic_black.jpg"
+					title="###"></a><br> <a href="###">vans_authentic_black<br>¥10000
+				</a>
+				<p></p>
+			</div>
+			<div class="five">
+				<!-- 画像仮なのでDBから取り出す、画像・商品名・価格押下時に洗濯した商品の商品詳細に遷移 -->
+				<a href="###"><img class="aaa" src="vans_authentic_black.jpg"
+					title="###"></a><br> <a href="###">vans_authentic_black<br>¥10000
+				</a>
+				<p></p>
+			</div>
+			<div class="six">
+				<!-- 画像仮なのでDBから取り出す、画像・商品名・価格押下時に洗濯した商品の商品詳細に遷移 -->
+				<a href="###"><img class="aaa" src="vans_authentic_black.jpg"
+					title="###"></a><br> <a href="###">vans_authentic_black<br>¥10000
+				</a>
+				<p></p>
+			</div>
+		</div>
+		<div class="third">
+			<div class="seven">
+				<!-- 画像仮なのでDBから取り出す、画像・商品名・価格押下時に洗濯した商品の商品詳細に遷移 -->
+				<a href="###"><img class="aaa" src="vans_authentic_black.jpg"
+					title="###"></a><br> <a href="###">vans_authentic_black<br>¥10000
+				</a>
+				<p></p>
+			</div>
+			<div class="eight">
+				<!-- 画像仮なのでDBから取り出す、画像・商品名・価格押下時に洗濯した商品の商品詳細に遷移 -->
+				<a href="###"><img class="aaa" src="vans_authentic_black.jpg"
+					title="###"></a><br> <a href="###">vans_authentic_black<br>¥10000
+				</a>
+				<p></p>
+			</div>
+			<div class="nine">
+				<!-- 画像仮なのでDBから取り出す、画像・商品名・価格押下時に洗濯した商品の商品詳細に遷移 -->
+				<a href="###"><img class="aaa" src="vans_authentic_black.jpg"
+					title="###"></a><br> <a href="###">vans_authentic_black<br>¥10000
+				</a>
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<div class="bottom mb-3">
+		<!-- 矢印押下時、次画面へ遷移 -->
+		<a href="###"> ← </a>
+		<p>1</p>
+		<a href="###"> → </a>
+	</div>
+	<!-- ここからフッター -->
+	<footer>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+			<div class="col-10"></div>
+			<div class="container col-2">
+				<!-- お問い合わせページのリンクを貼る -->
+				<a class="text-white " href="#">お問い合わせ</a>
+			</div>
+		</nav>
+	</footer>
+	<!-- ここまでフッダー  -->
+</body>
+
+</html>
