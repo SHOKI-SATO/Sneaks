@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="S_CART_G.css">
+<title>カート一覧（ゲスト）</title>
 <!-- bootstrap読込 -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
@@ -15,11 +17,9 @@
 	href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
 	integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
 	crossorigin="anonymous">
-<link rel="stylesheet" href="S_MYPAGE_COMP.css">
-<title>マイページ（登録情報完了）</title>
 </head>
 <body>
-	<!-- ここからヘッダー（ゲスト） -->
+	<!-- ここからヘッダー -->
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
 			<div class="container col-10 mr-auto">
@@ -54,14 +54,31 @@
 	<!-- ここまでヘッダー -->
 
 	<div class="main">
-		<div class="flex-column">
-			<p>変更が完了しました</p>
-			<div class="btn-center">
-				<!-- ボタン押下時、TOP画面へ遷移 -->
-				<input type="submit" value="TOPへ戻る">
-			</div>
+		<!-- SHOPPING CART -->
+		<div class="shopping-cart">
+			<h1>SHOPPING CART</h1>
+		</div>
+
+		<!-- ログインされていません -->
+		<div class="login-comment">
+			<h2>ログインされていません</h2>
+		</div>
+
+		<!-- ホーム画面へと移行 -->
+		<div class="btn-continuation-content">
+			<button type="button" class="btn-continuation">
+				ショッピングを続ける<br>CONTINUE SHOPPING
+			</button>
+		</div>
+
+		<!-- ログイン画面へ移行 -->
+		<div class="btn-login-content">
+			<button type="button" class="btn-login">
+				ログイン<br>LOGIN
+			</button>
 		</div>
 	</div>
+
 	<!-- ここからフッター -->
 	<footer>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -73,6 +90,5 @@
 		</nav>
 	</footer>
 	<!-- ここまでフッダー  -->
-
 </body>
 </html>
