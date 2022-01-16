@@ -48,19 +48,8 @@ ul {
 }
 
 .payment {
-    margin-top: 100px;
-}
-
-.payment-content {
-    padding-left: 0;
-    width: 940px;
-	margin: auto;
-	overflow: hidden;
-}
-
-.payment-content li {
-    float: left;
-    padding: 0 100px 0 100px;
+    margin-top: 50px;
+    margin-left: 80px;
 }
 
 .btn-content {
