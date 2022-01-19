@@ -67,7 +67,7 @@
         <label for="birthday" th:text="#{birthday}"></label>
       </div>
       <div class="mb-2">
-      	<input type="text" class="form-control" th:field=*{birthday} placeholder="yyyy/MM/dd" th:errorclass="is-invalid"/>
+      	<input type="text" class="form-control" th:field="*{birthday}" placeholder="yyyy/MM/dd" th:errorclass="is-invalid"/>
       	<div class="invalid-feedback" th:errors="*{birthday}"></div>
       </div>
 

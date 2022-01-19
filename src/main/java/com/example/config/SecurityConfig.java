@@ -11,6 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 
 @EnableWebSecurity
@@ -61,6 +62,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	        .and()
 	        //ログアウト時はログイン画面に遷移する
 	        .logout().logoutSuccessUrl("/login").permitAll();
+	
+	http
+		.logout()
+			.logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
+			.logoutUrl("/logout")
+			.logoutSuccessUrl("/login?logout");
 	
 		
 	}
