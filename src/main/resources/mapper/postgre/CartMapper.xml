@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- Mapperとxmlのマッピング -->
+<mapper namespace="com.example.repository.CartMapper">
+
+	<resultMap type="com.example.domain.user.model.MCart"
+		id="cart">
+		<id column="user_id" property="userId" />
+		<result column="product_Id" property="productId" />
+		<result column="product_Name" property="productName" />
+		<result column="product_Value" property="productValue" />
+		<result column="product_Image1" property="productImage1" />
+		<result column="product_Image2" property="productImage2" />
+		<result column="productImage3" property="productImage3" />
+	</resultMap>
+
+	<!-- カート情報取得 -->
+	<select id="findCart" resultType="MCart">
+		SELECT user_id, product_id,
+		product_name, product_value, product_image1,
+		product_image2,
+		product_image3
+		FROM cart
+		JOIN users
+		ON cart.user_id = users.user_id
+		RIGHT
+		JOIN product_table
+		ON cart.product_id = product_table.product_id
+		WHERE
+		user_id = #{userId}
+	</select>
+
+
+
+</mapper>
