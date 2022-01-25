@@ -19,8 +19,8 @@ values NOT EXISTS(
 INSERT INTO  product_table
  (product_name, product_brand, product_value, product_imege1, product_imege2, product_imege3,)
 VALUES
- ('STAN SMITH（Green）', 'adidas', 7777, '/Sneaks/src/main/resources/static/images/adidas_stansmith.jpg', '/Sneaks/src/main/resources/static/images/adidas_stansmith_s.jpg', '/Sneaks/src/main/resources/static/images/adidas_stansmith_b.jpg'),
 /* 1 */
+ ('STAN SMITH（Green）', 'adidas', 7777, '/Sneaks/src/main/resources/static/images/adidas_stansmith.jpg', '/Sneaks/src/main/resources/static/images/adidas_stansmith_s.jpg', '/Sneaks/src/main/resources/static/images/adidas_stansmith_b.jpg'),
  /* 2 */
  ('STAN SMITH（Green）', 'adidas', 7777, '/Sneaks/src/main/resources/static/images/adidas_stansmith_tricolore.jpg', '/Sneaks/src/main/resources/static/images/adidas_stansmith_tricolore_s.jpg', '/Sneaks/src/main/resources/static/images/adidas_stansmith_tricolore_b.jpg'),
  /* 3 */

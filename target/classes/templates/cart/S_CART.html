@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>カート一覧（中身あり）</title>
-<link rel="stylesheet" href="S_CART.css">
+<link rel="stylesheet" th:href="@{S_CART.css}" >
 <!-- bootstrap読込 -->
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
@@ -63,12 +64,12 @@
 			<div class="left cf">
 				<!-- 商品写真リンク -->
 				<div class="picture">
-					<img src="vans_authentic_black.jpg" class="photo" alt="商品写真">
+					<img th:text="${cart.productImage1}" src="vans_authentic_black.jpg" class="photo" alt="商品写真">
 				</div>
 				<!-- 商品詳細 -->
 				<div class="link">
 					<div class="link-col">
-						商品名:<a href="商品ページへ飛ぶ">samplesamplesamplesample<br>samplesamplesamplesample
+						商品名:<a th:text="${cart.productName}"href="商品ページへ飛ぶ">
 						</a>
 					</div>
 					<div class="link-col">
