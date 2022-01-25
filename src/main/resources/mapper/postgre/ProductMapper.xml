@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- Mapperとxmlのマッピング -->
+<mapper namespace="com.example.repository.ProductMapper">
+	
+	<!-- マッピング定義 -->
+	<resultMap type="com.example.domain.product.model.Product" id="product">
+		<id column="product_id" property="productId"/>
+		<result column="product_name" property="productName"/>
+		<result column="product_brand" property="productBrand"/>
+		<result column="product_value" property="productValue"/>
+		<result column="product_imege1" property="productImage1"/>
+		<result column="product_imege2" property="productImege2"/>
+		<result column="product_imege3" property="productImege3"/>
+	</resultMap>
+	
+	<!-- 商品複数取得 -->
+	<select id="findAll" resultType="Product">
+		select
+			*
+		from
+			product_table
+		order by 
+			product_id
+		desc
+	</select>
+
+</mapper>
+
