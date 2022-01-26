@@ -1,23 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ログイン画面</title>
-<link rel="stylesheet" href="S_LOGIN.css">
-<!-- bootstrap読込 -->
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-	rel="stylesheet"
-	integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-	crossorigin="anonymous">
-<!-- fontawesome読込 -->
-<link rel="stylesheet"
-	href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
-	integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
-	crossorigin="anonymous">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ログイン画面</title>
+	<link rel="stylesheet" th:href="@{/css/login/S_LOGIN.css}">
+	<!-- bootstrap読込 -->
+	<link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}">
+	<!-- fontawesome読込 -->
+	<link rel="stylesheet" th:href="@{/webjars/font-awesome/css/font-awesome.min.css}">
+	<!-- jQuery読込 -->
+	<script th:src="@{/webjars/jquery/jquery.min.js}" defer></script>
+	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}" defer></script>
 </head>
 
 <body>
@@ -36,33 +32,32 @@
 			<h1>ログイン</h1>
 			<p>会員のお客様</p>
 			<p>メールアドレスとパスワードを入力してログインして下さい</p>
-
-
-			<div class="id">
-				<div class="mail">メールアドレス :</div>
-				<input class="text" type="text">
-			</div>
-
-
-			<div class="pass">
-				<div class="password">Password :</div>
-				<input class="text" type="text">
-			</div>
-
-
-			<div class="login">
-				<input type="submit" value="ログイン">
-			</div>
-
-			<div class="link">
-				<a href="">パスワードをお忘れの方はこちら</a>
-			</div>
-
-			<p>初めてご利用の方・会員以外の方</p>
-
-			<div class="sinki">
-				<input type="submit" value="新規会員登録">
-			</div>
+			<form class="form-signin" role="form" id="login" th:action="@{/login}" method="post">
+				<div class="id">
+					<div class="mail">メールアドレス :</div>
+					<input class="text" name="userId"  type="text">
+				</div>
+	
+	
+				<div class="pass">
+					<div class="password">Password :</div>
+					<input class="text" type="password" name="password">
+				</div>
+	
+	
+				<div class="login">
+					<input type="submit" value="ログイン">
+				</div>
+	
+				<div class="link">
+					<a href="">パスワードをお忘れの方はこちら</a>
+				</div>
+			</form>
+				<p>初めてご利用の方・会員以外の方</p>
+	
+				<div class="sinki">
+					<input type="button" value="新規登録" th:attr="onClick='location.href=\''+@{/user/signup}+'\''">
+				</div>
 		</div>
 	</div>
 	<!-- ここからフッター -->

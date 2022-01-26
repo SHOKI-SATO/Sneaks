@@ -1,4 +1,4 @@
-package com.example.demo;
+/**package com.example.demo;
 
 import javax.inject.Inject;
 
@@ -72,4 +72,4 @@ public class productsController {
 
         return "redirect:/products";
     }
-}
+}*/

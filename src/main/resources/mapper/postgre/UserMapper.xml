@@ -21,7 +21,7 @@
 	<!-- ユーザー一件登録 -->
 	<insert id="insertOne">
 		insert into m_user(
-			id,
+			user_Id,
 			name,
 			password,
 			birthday,
@@ -32,7 +32,7 @@
 			role
 		)
 		values(
-			#{id},
+			#{userId},
 			#{userName},
 			#{password},
 			#{birthday},

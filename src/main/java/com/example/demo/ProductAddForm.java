@@ -1,4 +1,4 @@
-package com.example.demo;
+/**package com.example.demo;
 
 import java.io.Serializable;
 
@@ -10,7 +10,6 @@ public class ProductAddForm implements Serializable {
 
     /**
      *
-     */
     private static final long serialVersionUID = 1L;
 
     @NotNull
@@ -35,4 +34,4 @@ public class ProductAddForm implements Serializable {
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-}
+}*/
