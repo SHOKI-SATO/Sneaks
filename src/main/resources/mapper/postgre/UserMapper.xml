@@ -9,7 +9,7 @@
 	<resultMap type="com.example.domain.user.model.MUser" id="user">
 		<id column="user_id" property="userId"/>
 		<result column="password" property="password"/>
-		<result column="user_name" property="userName"/>
+		<result column="name" property="userName"/>
 		<result column="birthday" property="birthday"/>
 		<result column="sex" property="sex"/>
 		<result column="phone_number" property="phoneNumber"/>
