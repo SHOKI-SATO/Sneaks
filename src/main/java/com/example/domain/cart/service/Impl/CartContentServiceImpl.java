@@ -15,7 +15,6 @@ public class CartContentServiceImpl implements CartContentService{
 	@Autowired
 	private CartMapper mapper;
 	
-	@Override
 	public List<MCart>getCart(){
 		return mapper.findCart();
 	}

@@ -8,6 +8,9 @@ import com.example.domain.cart.model.MCart;
 
 @Service
 public interface CartContentService {
-	public List<MCart> getCart();
+	public static List<MCart> getCart() {
+		// TODO 自動生成されたメソッド・スタブ
+		return null;
+	}
 
 }

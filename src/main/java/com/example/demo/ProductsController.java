@@ -21,7 +21,7 @@ import com.example.session.domain.model.CartItem;
 
 @Controller
 @RequestMapping("products")
-public class productsController {
+public class ProductsController {
 
     @Inject
     productsService productsService;
