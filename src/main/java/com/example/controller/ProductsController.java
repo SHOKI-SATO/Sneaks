@@ -1,4 +1,5 @@
 package com.example.controller;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -8,6 +9,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.example.domain.product.model.Product;
+import com.example.domain.product.service.ProductService;
 import com.example.domain.user.model.MUser;
 import com.example.domain.user.service.UserService;
 
@@ -21,6 +24,9 @@ public class ProductsController {
 	@Autowired
 	private UserService userService;
 	
+	@Autowired
+	private ProductService productService;
+	
 	@GetMapping("/top")
 	public String getTop(ModelMap model) {
 		//ログインしているユーザー情報の獲得
@@ -33,10 +39,16 @@ public class ProductsController {
 		MUser user = userService.getUserOne(id);
 		String name = user.getUserName();
 		
-		log.info(name);
-		
+		//modelにユーザー名とIDを格納する
 		model.addAttribute("userId", id);
 		model.addAttribute("userName", name);
+		
+		//商品一覧を取得
+		List<Product> products = productService.getTopProducts();
+		
+		//modelに商品一覧を格納
+		model.addAttribute("productsList", products);
+		
 		return "/top/S_TOP";
 	}
 

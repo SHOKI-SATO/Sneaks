@@ -15,41 +15,15 @@ body {
 
 .first {
     width: 1050px;
-    height: 270px;
+    height: 540px;
     display: flex;
     justify-content: space-evenly;
+    alin-items:center;
+    flex-wrap: wrap;
     margin: 0 auto;
 }
 
-.second {
-    width: 1050px;
-    height: 270px;
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0 auto;
-}
-
-.one {
-    width: 300px;
-}
-
-.two {
-    width: 300px;
-}
-
-.three {
-    width: 300px;
-}
-
-.four {
-    width: 300px;
-}
-
-.five {
-    width: 300px;
-}
-
-.six {
+.arrivals {
     width: 300px;
 }
 

@@ -57,55 +57,18 @@
 	<script th:src="@{/js/top/top.js}"></script>
 
 	<div class="top">
-		<img src="./特集画像/adidas.jpeg" title="アディダス"> <img
-			src="./特集画像/nike.jpeg" title="ナイキ"> <img
-			src="./特集画像/converse.jpeg" title="コンバース">
+		<img th:src="@{/images/adidas.jpeg}" title="アディダス"> <img
+			th:src="@{/images/nike.jpeg}" title="ナイキ"> <img
+			th:src="@{/images/converse.jpeg}" title="コンバース">
 	</div>
 	<div class="new-arrival">
 		<h1>NEW ARRIVALS</h1>
 		<div class="new">
 			<div class="first">
-				<div class="one">
+				<div class="arrivals" th:each="item:*{productsList}">
 					<!-- 画像仮なのでDBから取り出す、画像・商品名・価格押下時に洗濯した商品の商品詳細に遷移 -->
-					<a href="###"><img class="aaa" src="vans_authentic_black.jpg"
-						title="###"></a><br> <a href="###">vans_authentic_black<br>¥10000
-					</a>
-					<p></p>
-				</div>
-				<div class="two">
-					<!-- 画像仮なのでDBから取り出す、画像・商品名・価格押下時に洗濯した商品の商品詳細に遷移 -->
-					<a href="###"><img class="aaa" src="vans_authentic_black.jpg"
-						title="###"></a><br> <a href="###">vans_authentic_black<br>¥10000
-					</a>
-					<p></p>
-				</div>
-				<div class="three">
-					<!-- 画像仮なのでDBから取り出す、画像・商品名・価格押下時に洗濯した商品の商品詳細に遷移 -->
-					<a href="###"><img class="aaa" src="vans_authentic_black.jpg"
-						title="###"></a><br> <a href="###">vans_authentic_black<br>¥10000
-					</a>
-					<p></p>
-				</div>
-			</div>
-			<div class="second">
-				<div class="four">
-					<!-- 画像仮なのでDBから取り出す、画像・商品名・価格押下時に洗濯した商品の商品詳細に遷移 -->
-					<a href="###"><img class="aaa" src="vans_authentic_black.jpg"
-						title="###"></a><br> <a href="###">vans_authentic_black<br>¥10000
-					</a>
-					<p></p>
-				</div>
-				<div class="five">
-					<!-- 画像仮なのでDBから取り出す、画像・商品名・価格押下時に洗濯した商品の商品詳細に遷移 -->
-					<a href="###"><img class="aaa" src="vans_authentic_black.jpg"
-						title="###"></a><br> <a href="###">vans_authentic_black<br>¥10000
-					</a>
-					<p></p>
-				</div>
-				<div class="six">
-					<!-- 画像仮なのでDBから取り出す、画像・商品名・価格押下時に洗濯した商品の商品詳細に遷移 -->
-					<a href="###"><img class="aaa" src="vans_authentic_black.jpg"
-						title="###"></a><br> <a href="###">vans_authentic_black<br>¥10000
+					<a href="###"><img class="aaa" th:src="@{__${item.productImage1}__}"
+						title="###"></a><br> <a href="###" th:text="${item.productName}"><br th:text="${item.price}">
 					</a>
 					<p></p>
 				</div>
